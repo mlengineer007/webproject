@@ -1,0 +1,90 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.8">
+        <link rel="stylesheet" href="public/quiz.css" type="text/css">
+        <title> web development quiz</title>
+  </head>
+    
+    
+<body id='body'>
+     
+    <header>
+     <div id=ham>
+        
+         
+         <div class="toggle" onclick="slide()">
+         <span></span>
+         <span></span>
+         <span></span>
+             
+         
+         
+         </div>
+         
+          <nav> 
+         
+         <ul>
+             <li><a href='quizhome.html'>home</a></li>
+         <li><a href="webpageintro.html">web development intro</a></li>
+             <li><a href='quiz.html'>quiz page</a></li>
+         
+         </ul>
+         
+         </nav>
+    
+        </div>
+        <aside>
+        <div id="heading">  <h1>WEB DESIGN QUIZ</h1></div>
+        
+        </aside>
+        
+        
+    </header>
+    
+    <section> 
+    <h2>Rules:</h2>
+        <ul>
+        <li> Time limit -200 sec</li>
+            <li>Complete before time</li>
+            <li>If you fail to complete before time then you will not be evaluate</li>
+            <li>click submit to submit your answer</li>
+            <li>once you submit your answer you cant go back to the previous question</li>
+            <li>10 marks for each question</li>
+            <li>No negative marking for the wrong  questions</li>
+            <li>click on reatake quiz option to retake the quiz</li>
+        </ul>
+    </section>
+    
+
+    
+    <form onsubmit="submitname(event)" name="form">
+        
+    
+    <h4>Enter your name:</h4>
+    <input type ="text" name="username" id="username" required>
+        
+    <button class="button" type="submit">Start quiz</button>
+        
+       
+       
+    
+    </form> 
+      
+        
+      
+    
+    
+ <footer>
+     <div>
+  <p id='writername'>Developer name:  <br>Rashmith Reddy Boppidi</p>
+  <p id='mail' style="color: black">&copy;All rights reserved to the owner<br>contact :
+      <a href="rashnik.2020@gmail.com">webmaster</a></p>
+         </div>
+</footer>  
+    
+ </body>
+
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
+<script src="public/quiz.js"></script>
+</html>

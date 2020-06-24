@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="public/quiz.css" type="text/css">
+        <title> web development quiz</title>
+
+  </head>
+    
+
+    
+<body id='body'>
+
+    <header>
+        <div id='heading'>
+        <h1>WEB DESIGNING QUIZ</h1>
+        
+        </div>
+    
+    </header>
+    
+    
+	<br>
+	<br>
+
+<table>
+    
+<tr><td>NAME : </td>
+    <td><script>var k = localStorage.getItem("name");
+		document.write(k);
+        </script></td></tr>
+	<tr>   
+		<td>
+		TIME :
+		</td>
+	<td> 
+		 <span id="timer"></span>
+		</td>	
+	</tr>
+    
+      </table>  
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+  <div class= "wrapper">
+	
+		<main>
+			<div class = "random">
+			<form class="questionForm1" id="q1" data-question="1">
+				<h3>1. Which tag should be used to represent the "header" of a document?</h3>
+				<ul>
+					<li><input name="q1" type="radio" value="a" />&lt;head&gt;</li>
+					<li><input name="q1" type="radio" value="b" />&lt;header&gt;</li>
+					<li><input name="q1" type="radio" value="c" />&lt;heading&gt;</li>
+					<li><input name="q1" type="radio" value="d" />&lt;main&gt;</li>
+				</ul>
+				<button id="submit" class='unique'>Submit</button>
+			</form>
+			</div>
+			
+			<form class="questionForm" id="q2" data-question="2">
+				<h3>2.Which of the following is NOT a new feature of HTML5? </h3>
+				<ul>
+					<li><input name="q2" type="radio" value="a" />New Media Elements</li>
+					<li><input name="q2" type="radio" value="b" />Form Types</li>
+					<li><input name="q2" type="radio" value="c" />Local Storage</li>
+					<li><input name="q2" type="radio" value="d" />Cookies</li>
+				</ul>
+				<button id="submit" class='unique'>Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q3" data-question="3">
+				<h3>3. Which element is the most appropriate to wrap around each blog post on a page?</h3>
+				<ul>
+					<li><input name="q3" type="radio" value="a" />&lt;section&gt;</li>
+					<li><input name="q3" type="radio" value="b" />&lt;post&gt;</li>
+					<li><input name="q3" type="radio" value="c" />&lt;article&gt;</li>
+					<li><input name="q3" type="radio" value="d" />&lt;main&gt;</li>
+				</ul>
+				<button id="submit" class='unique'>Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q4" data-question="4">
+				<h3>4. Which HTML5 tag is used for sidebar content?</h3>
+				<ul>
+					<li><input name="q4" type="radio" value="a" />&lt;aside&gt;</li>
+					<li><input name="q4" type="radio" value="b" />&lt;sidebar&gt;</li>
+					<li><input name="q4" type="radio" value="c" />&lt;sub&gt;</li>
+					<li><input name="q4" type="radio" value="d" />&lt;side&gt;</li>
+				</ul>
+				<button id="submit" class='unique' >Submit</button>
+			</form>
+			
+			<form class="questionForm" id="q5" data-question="5">
+				<h3>5. Using canvas, which is used to color in a rectangle?</h3>
+				<ul>
+					<li><input name="q5" type="radio" value="a" />strokeStyle</li>
+					<li><input name="q5" type="radio" value="b" />fillRect</li>
+					<li><input name="q5" type="radio" value="c" />strokeFill</li>
+					<li><input name="q5" type="radio" value="d" />rectFill</li>
+				</ul>
+                <br>
+                <br>
+				<button id="submit" class='unique'>Submit</button>
+			</form>
+			
+			<div id="results"></div>
+			<br>
+		</main>
+			
+			</div>
+	
+	<form method="get" action="quiz.html" id="quizretake">
+	<button type="submit">retake quiz</button>
+	</form>
+	
+	
+    
+    
+    
+     <footer>
+     <div>
+  <p id='writername'>Developer name:  <br>Rashmith Reddy Boppidi</p>
+  <p id='mail' style="color:black">&copy;All rights reserved to the owner<br>contact :
+      <a href="rashnik.2020@gmail.com">webmaster</a></p>
+         </div>
+</footer>
+    
+    
+    
+    
+    
+	
+	
+    
+</body>
+	
+	 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	 <script src="public/quiz.js"></script>
+	
+	<script>
+	
+		var sec = 200;
+		var time = setInterval(myTimer, 1000);
+
+		function myTimer() {
+			document.getElementById('timer').innerHTML = sec + "sec left";
+			sec--;
+			if (sec == -1) {
+				clearInterval(time);
+				$('.random').hide();
+				$('.questionForm').hide();
+				window.alert("you failed to complete before time you will not be evaluated, retake quiz")
+				
+			}
+		}
+	
+        
+        
+        
+        
+        
+        
+        
+        
+	
+	
+	</script>
+	
+	
+	
+	
+
+
+</html>
